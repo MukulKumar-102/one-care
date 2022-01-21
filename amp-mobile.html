@@ -1,0 +1,1229 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>OneCare - A Chain of Smart Diabetes Clinics</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-base-carousel"
+        src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js"></script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+
+
+
+    <style amp-custom>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+
+            box-sizing: border-box;
+
+            font-family: "Montserrat", sans-serif;
+        }
+
+        #container {
+            max-width: 430px;
+            background: #F6F6F6;
+            margin: auto;
+        }
+
+        h1 {
+
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0em;
+            margin: 10px 0px;
+        }
+
+        h2 {
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 21px;
+            margin: 10px 0px;
+            letter-spacing: 0em;
+        }
+
+        p {
+
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 0em;
+            margin: 10px 0px;
+        }
+
+        h4 {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 0em;
+        
+        }
+
+        .blue-bg {
+            color: white;
+            background: #28B1DA;
+        }
+
+        .orange-txt {
+            color: #F07162;
+        }
+
+        .gray-txt {
+            color: #787B7D;
+        }
+
+        .drk-blu-txt {
+            color: #14566A;
+        }
+
+        .center-txt {
+            text-align: center;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .flex1 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        header {
+            width: 100%;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav div,footer nav div {
+            display: flex;
+            align-items: center;
+            width: 50%;
+        }
+
+        header nav,
+        footer nav {
+            justify-content: space-between;
+            padding: 10px;
+            height: 100%;
+            width: 95%;
+            align-items: center;
+            display: flex;
+            margin: auto;
+        }
+
+        .logo {
+            margin-right: 15px;
+            width: 140px;
+        }
+
+        #form-section #form {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #form input {
+            margin: 15px 5px;
+            padding: 12px;
+            font-size: 12px;
+            border-radius: 6px;
+            border: 1px solid gray;
+        }
+
+        .button {
+            border: none;
+            font-weight: 700;
+        }
+
+        section {
+            padding: 30px;
+        }
+
+        #promises {
+            background: #14566A;
+        }
+
+        #promies-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        #promies-wrapper>div {
+            max-width: 300px;
+            margin: 10px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .promises-img-wrapper {
+            width: 50%;
+            margin: auto;
+        }
+
+        #Diabetologists {
+            background: linear-gradient(177.97deg, #C6EFFF 1.72%, #FFF1F1 98.52%)
+        }
+
+        #manage-wrapper>div {
+            /* max-width: 250px; */
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        #manage-wrapper>div:nth-child(odd) {
+            background: linear-gradient(177.97deg, #A3E5FF 1.72%, #FFF1F1 98.52%);
+        }
+
+        #manage-wrapper>div:nth-child(even) {
+            background: linear-gradient(180deg, #FFAFC6 -4.33%, #FFEFD4 109.25%)
+        }
+
+        #Diabetologists-wrapper {
+            width: 90%;
+            margin: auto;
+        }
+
+        #Diabetologists-wrapper>div {
+            display: flex;
+            margin: 30px 0px;
+            border: 1px solid white;
+        }
+
+        .Diabetologists-img-wrapper {
+            width: 42%;
+          margin-right: 10px;
+        }
+
+        #user-say {
+            background: #FFF5E7;
+        }
+
+        #user-say-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #user-say-wrapper>div {
+            flex: 1;
+            position: relative;
+        }
+
+        #over-say-review-wrapper>div {
+            margin: 20px auto;
+            background-color: white;
+            padding: 0px 10px;
+            display: flex;
+            border-radius: 10px;
+            /* width: 80%; */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .over-say-review-img-wrapper {
+            width: 15%;
+            margin: auto;
+        }
+
+        .over-say-review-detail-wrapper {
+            width: 75%;
+        }
+
+        .location-img-wrapper {
+            width: 30%;
+        }
+
+        .map-btn-wrapper>div {
+            width: 50%;
+            color: white;
+            margin: 2px;
+            padding: 10px;
+            background: linear-gradient(90.13deg, #F8A622 -6.56%, #F16679 177.9%);
+            border-radius: 5px;
+
+        }
+
+        #top {
+            padding: 0px;
+        }
+
+        .slide:nth-child(even) {
+            background: linear-gradient(177.97deg, #C6EFFF 1.72%, #F2E8FF 98.52%),
+                linear-gradient(0deg, #C4C4C4, #C4C4C4);
+        }
+
+        .slide:nth-child(odd) {
+            background: linear-gradient(180deg, #FFCFDD -4.68%, #FFEFD4 118.2%),
+                linear-gradient(0deg, #C4C4C4, #C4C4C4);
+        }
+
+        .slide {
+            position: relative;
+            height: 100%;
+        }
+
+        .slide>div:last-child {
+            position: relative;
+            top: 190px;
+        }
+
+        #location div h1 {
+            margin-left: 20px;
+        }
+
+        .slide>div:first-child {
+            display: flex;
+            padding: 20px;
+            height: 200px;
+            justify-content: space-between;
+            position: absolute;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .loc-detail {
+            margin-right: 10px;
+        }
+        #FAQ{
+            background: #FFF5E7;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div class="logo-wrapper">
+                    <a href="/" class="logo">
+                        <amp-img src="./assest/OneCare_Logo-03_3.webp" width="3.2" height="1" layout="responsive"
+                            alt="logo">
+                        </amp-img>
+                    </a>
+
+                </div>
+                <div>
+                    <p class="gray-txt web"> A Chain<BR /> of Smart Diabetes Clinics</p>
+
+                </div>
+            </nav>
+        </header>
+
+        <section id="top">
+
+            <div>
+                <amp-base-carousel height="500" layout="fixed-height" visible-count="1" advance-count="1"
+                    auto-advance='true' auto-advance-interval="100000000">
+                    <div class="slide">
+                        <div>
+
+
+                            <h1>Anup khees<br /> <span style="font-weight: 100;">Age-35 yrs</span> </h1>
+
+                            <p>My blood sugar level came down to 92/115 and my medicine dosage also got reduced to half
+                                and I'm very sure that it will stop completely in some time. </p>
+                            <div class="blue-bg" style="padding: 6px; border-radius: 6px;">
+                                <p class="center-txt">Book a Doctor Consultation</p>
+                            </div>
+                        </div>
+                        <div>
+                            <amp-img src="./assest/1_HEoLBLidT2u4mhJ0oiDgig 2 (1).webp" width="3" height="2.7"
+                                layout="responsive" alt="">
+                            </amp-img>
+                        </div>
+
+                    </div>
+                    <div class="slide">
+                        <div>
+
+                            <h1 class="orange-txt">Live a life beyond diabetes,<br /> starting today.</h1>
+
+                            <p>Our team includes leading diabetologists, endocrinologists, diabetes educators,
+                                dieticians, health coaches all working with you to build a personalised care plan
+                                specific to your need. </p>
+                            <div class="blue-bg" style="padding: 6px; border-radius: 6px;">
+                                <p class="center-txt">Book a Doctor Consultation</p>
+                            </div>
+                        </div>
+                        <div>
+                            <amp-img src="./assest/istockphoto-1192489366-612x612 1.webp" width="1.5" height="1"
+                                layout="responsive" alt="">
+                            </amp-img>
+                        </div>
+
+                    </div>
+                    <div class="slide">
+                        <div>
+                            <h1>Don't just fight diabetes,<br /> understand & manage it.</h1>
+
+                            <p>Diabetes care is unique to everyone. Beat it with the Right Approach that works for you.
+                            </p>
+                            <div class="blue-bg" style="padding: 6px; border-radius: 6px;">
+                                <p class="center-txt">Book a Doctor Consultation</p>
+                            </div>
+                        </div>
+                        <div>
+                            <amp-img src="./assest/slack-imgs-1 1.webp" width="1.5" height="1.3" layout="responsive"
+                                alt="">
+                            </amp-img>
+                        </div>
+
+                    </div>
+
+                </amp-base-carousel>
+            </div>
+        </section>
+
+        <section id="form-section">
+
+
+            <h1 class="center-txt">
+                Start your <span class="orange-txt"> personalised <br />diabetic program today!</span>
+            </h1>
+
+            <form id="form" method="post" action-xhr="https://onecare.co.in/wp-json/api/v1/lead" target="_top">
+
+
+                <input type="text" name="name" placeholder="Full Name" required>
+
+                <input type="tel" name="phone" placeholder="Phone" pattern="[0-9]{10}" maxlength="10" required>
+
+
+
+
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="    display: flex;
+                    align-items: center;">
+                        <input type="checkbox" id="Online" name="Online Consultation" checked>
+                        <label style="font-size: 12px;" for="Online">Online Consultation</label>
+                    </div>
+
+                    <div style="    display: flex;
+                    align-items: center;">
+                        <input type="checkbox" id="Clinical" name="Clinical Consultation">
+                        <label style="font-size: 12px;" for="Clinical">Clinical Consultation</label>
+                    </div>
+
+                </div>
+                <input class="blue-bg button" type="submit" value="SUBMIT">
+                <div submitting style="position: absolute; background-color: gray;">
+                    <template type="amp-mustache">
+                        MESSAGE OR LOADING GIF HERE
+                    </template>
+                </div>
+                <div submit-success>
+                    <template type="amp-mustache">
+                        Subscription successful!
+                    </template>
+                </div>
+                <div submit-error>
+                    <template type="amp-mustache">
+                        Subscription failed!
+                    </template>
+                </div>
+            </form>
+        </section>
+
+
+
+
+        <section id="manage">
+            <h1 class=" center-txt orange-txt">Manage your diabetes <br /> in 3 easy steps</h1>
+            <div id="manage-wrapper">
+
+
+                <div>
+                    <div class="manage-img-wrapper">
+                        <amp-img src="./assest/manage1.webp" width="1.5" height="1" layout="responsive" alt="logo">
+                        </amp-img>
+                    </div>
+
+
+                    <div>
+
+                        <h2 class="drk-blu-txt">
+                            Step 1
+                        </h2>
+                        <p>Meet your team of Expert diabetologists, Health counsellors & dieticians at OneCare Clinics
+                            and get expert analysis. </p>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <div class="manage-img-wrapper">
+                        <amp-img src="./assest/manage2.webp" width="1.5" height="1" layout="responsive" alt="logo">
+                        </amp-img>
+                    </div>
+
+
+                    <div>
+
+                        <h2 class="drk-blu-txt">
+                            Step 1
+                        </h2>
+                        <p>Meet your team of Expert diabetologists, Health counsellors & dieticians at OneCare Clinics
+                            and get expert analysis. </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="manage-img-wrapper">
+                        <amp-img src="./assest/manage3.webp" width="1.5" height="1" layout="responsive" alt="logo">
+                        </amp-img>
+                    </div>
+
+
+                    <div>
+
+                        <h2 class="drk-blu-txt">
+                            Step 1
+                        </h2>
+                        <p>Meet your team of Expert diabetologists, Health counsellors & dieticians at OneCare Clinics
+                            and get expert analysis. </p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+
+
+
+
+        <section id="Diabetologists">
+            <h1 class="center-txt ">Best Endocrinologists & Diabetologists<span class="orange-txt">in Bangalore</span>
+            </h1>
+            <div id="Diabetologists-wrapper">
+
+
+
+                <div>
+
+                    <div class="Diabetologists-img-wrapper">
+                        <amp-img src="./assest/doc1.webp" width="1" height="1" layout="responsive" alt="logo">
+                        </amp-img>
+                    </div>
+
+                    <div>
+                        <h4> Dr. Basavaraj GS<br />
+                            MBBS, MD, DM<br /> (Endocrinology) </h4>
+                        <h4 class="orange-txt">13+ years of experience<br/>
+                   Associated with Narayana Hrudayalaya</h4>
+                        <div style="display: flex;">
+                            <div style="width: 6%;">
+                                <amp-img src="./assest/Thumbs Up.webp" width="1" height="1" layout="responsive" alt="">
+                                </amp-img>
+                            </div>
+                            <h4>98% Approval on Practo</h4>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div>
+
+                    <div class="Diabetologists-img-wrapper">
+                        <amp-img src="./assest/doc2png.webp" width="1" height="1" layout="responsive" alt="logo">
+                        </amp-img>
+                    </div>
+
+                    <div>
+                        <h4> Dr. C Siva Rama Krishna<br /> MD, M.H. Sc.<br /> (Diabetology)</h4>
+                        <h4 class="orange-txt"> 10+ years of experience</h4>
+                        <div style="display: flex;">
+                            <div style="width: 6%;">
+                                <amp-img src="./assest/Thumbs Up.webp" width="1" height="1" layout="responsive" alt="">
+                                </amp-img>
+                            </div>
+                            <h4>98% Approval on Practo</h4>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div>
+
+                    <div class="Diabetologists-img-wrapper">
+                        <amp-img src="./assest/doc3.webp" width="1" height="1" layout="responsive" alt="logo">
+                        </amp-img>
+                    </div>
+
+                    <div>
+                        <h4> Dr. Lavanya<br />
+                            MBBS<br />
+                            (Diabetology)
+
+                        </h4>
+
+                        <h4 class="orange-txt"> 17+ years of experience<br/>
+
+                         Associated with Apollo Hospitals</h4>
+                        <div style="display: flex;">
+                            <div style="width: 6%;">
+                                <amp-img src="./assest/Thumbs Up.webp" width="1" height="1" layout="responsive" alt="">
+                                </amp-img>
+                            </div>
+                            <h4>98% Approval on Practo</h4>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <section id="impact-program">
+
+            <h1 class="center-txt">OneCare <span class="orange-txt">
+                    IMPACT
+                </span> Program
+            </h1>
+            <h2 class=" center-txt ">5 Phase Treatment Approach for Type 2 & Pre diabetes</h2>
+
+            <div id="impact-program-wrapper">
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <section id="user-say">
+            <div id="user-say-wrapper">
+                <div id="over-say-review">
+
+
+                    <h1 class="center-txt">Our Verified Customer reviews </h1>
+                    <p class=" center-txt">1000+ reviews</p>
+
+                    <div id="over-say-review-wrapper">
+
+                        <div>
+                            <div class="over-say-review-img-wrapper">
+                                <amp-img src="./assest/google.webp" width="1" height="1" layout="responsive" alt="">
+                                </amp-img>
+                            </div>
+                            <div class="over-say-review-detail-wrapper">
+                                <h4 class="orange-txt">Laxminarasimha Reddy</h4>
+                                <div style="width:60px; margin: 5px  0px;"><amp-img src="./assest/stars.webp"
+                                  width="3.5"
+                                  height="1"
+                                  layout="responsive"
+                                  alt="logo">
+                                </amp-img></div>
+                                <p class="gray-txt">A great place for total Diabetes care. The front desk and customer
+                                    care explains the
+                                    program in detail. Doctors and Dieticians are well qualified.
+                                    No delay in follow up consultations too! Would recommend to my family n friends</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="over-say-review-img-wrapper">
+                                <amp-img src="./assest/google.webp" width="1" height="1" layout="responsive" alt="">
+                                </amp-img>
+                            </div>
+                            <div class="over-say-review-detail-wrapper">
+                                <h4 class="orange-txt">Deepa Kamath</h4>
+                                <div style="width:60px; margin: 5px  0px;"><amp-img src="./assest/stars.webp"
+                                    width="3.5"
+                                    height="1"
+                                    layout="responsive"
+                                    alt="logo">
+                                  </amp-img></div>
+                                <p class="gray-txt">A great place for total Diabetes care. The front desk and customer
+                                    care explains the
+                                    program in detail. Doctors and Dieticians are well qualified.
+                                    No delay in follow up consultations too! Would recommend to my family n friends</p>
+                            </div>
+                        </div>
+
+
+
+                        <div>
+                            <div class="over-say-review-img-wrapper">
+                                <amp-img src="./assest/google.webp" width="1" height="1" layout="responsive" alt="">
+                                </amp-img>
+                            </div>
+                            <div class="over-say-review-detail-wrapper">
+                                <h4 class="orange-txt">Deepa Kamath</h4>
+                                <div style="width:60px; margin: 5px  0px;"><amp-img src="./assest/stars.webp"
+                                    width="3.5"
+                                    height="1"
+                                    layout="responsive"
+                                    alt="logo">
+                                  </amp-img></div>
+                                <p class="gray-txt">A great place for total Diabetes care. The front desk and customer
+                                    care explains the
+                                    program in detail. Doctors and Dieticians are well qualified.
+                                    No delay in follow up consultations too! Would recommend to my family n friends</p>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="over-say-review-img-wrapper">
+                                <amp-img src="./assest/p-Vector.webp" width="1" height="1" layout="responsive" alt="">
+                                </amp-img>
+                            </div>
+                            <div class="over-say-review-detail-wrapper">
+                                <h4 class="orange-txt">Deepa Kamath</h4>
+                                <div style="width:60px; margin: 5px  0px;"><amp-img src="./assest/stars.webp"
+                                    width="3.5"
+                                    height="1"
+                                    layout="responsive"
+                                    alt="logo">
+                                  </amp-img></div>
+                                <p>A great place for total Diabetes care. The front desk and customer care explains the
+                                    program in detail. Doctors and Dieticians are well qualified.
+                                    No delay in follow up consultations too! Would recommend to my family n friends</p>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="over-say-review-img-wrapper">
+                                <amp-img src="./assest/p-Vector.webp" width="1" height="1" layout="responsive" alt="">
+                                </amp-img>
+                            </div>
+                            <div class="over-say-review-detail-wrapper">
+                                <h4 class="orange-txt">Deepa Kamath</h4>
+                                <div style="width:60px; margin: 5px  0px;"><amp-img src="./assest/stars.webp"
+                                    width="3.5"
+                                    height="1"
+                                    layout="responsive"
+                                    alt="logo">
+                                  </amp-img></div>
+                                <p>A great place for total Diabetes care. The front desk and customer care explains the
+                                    program in detail. Doctors and Dieticians are well qualified.
+                                    No delay in follow up consultations too! Would recommend to my family n friends</p>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="over-say-review-img-wrapper">
+                                <amp-img src="./assest/p-Vector.webp" width="1" height="1" layout="responsive" alt="">
+                                </amp-img>
+                            </div>
+                            <div class="over-say-review-detail-wrapper">
+                                <h4 class="orange-txt">Deepa Kamath</h4>
+                                <div style="width:60px; margin: 5px  0px;"><amp-img src="./assest/stars.webp"
+                                    width="3.5"
+                                    height="1"
+                                    layout="responsive"
+                                    alt="logo">
+                                  </amp-img></div>
+                                <p>A great place for total Diabetes care. The front desk and customer care explains the
+                                    program in detail. Doctors and Dieticians are well qualified.
+                                    No delay in follow up consultations too! Would recommend to my family n friends</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section id="location">
+            <h1 class="center-txt" style="color:  #F26975">Our Locations</h1>
+            <h3 class="center-txt">We are at 3 locations in Bengaluru</h3>
+
+            <div>
+                <div id="map-img-wrapper">
+                    <amp-img src="./assest/map.webp" width="1.2" height="1" layout="responsive" alt="logo">
+                    </amp-img>
+
+                </div>
+                <div>
+                    <h1 class="orange-txt">Bellandur</h1>
+                    <div class="flex">
+                        <div class="loc-detail">
+                            <div class="flex1">
+                                <div class="location-img-wrapper">
+                                    <amp-img src="./assest/Location.webp" width="1" height="1" layout="responsive"
+                                        alt="">
+                                    </amp-img>
+                                </div>
+                                <div>
+                                    <p>Opposit to, Sobha Quartz, 227, Ground Floor, Off, Outer Ring Rd, Green Glen
+                                        Layout,
+                                        Bellandur, Bengaluru, Karnataka 560103
+
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="flex">
+                                <div style="width:10%">
+                                    <amp-img src="./assest/Phone.webp" width="1" height="1" layout="responsive"
+                                        alt="logo">
+                                    </amp-img>
+                                </div>
+                                <h3>080 4680 8989</h3>
+                            </div>
+                            <div class="flex">
+                                <h3 style="margin: 5px;">4.9</h3>
+                                <div style="width: 40%;">
+                                    <amp-img src="./assest/stars.webp" width="5" height="1" layout="responsive" alt="">
+                                    </amp-img>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="width: 500px;">
+                            <amp-img src="./assest/Rectangle 136.webp" width="1.2" height="1" layout="responsive"
+                                alt="logo">
+                            </amp-img>
+                        </div>
+
+
+                    </div>
+                    <div class="flex map-btn-wrapper">
+                        <div>
+                            <p class="center-txt">GET DIRECTIONS</p>
+                        </div>
+                        <div>
+                            <p class="center-txt">Book a Consultation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1 class="orange-txt">Koramangala</h1>
+                    <div class="flex">
+                        <div class="loc-detail">
+                            <div class="flex1">
+                                <div class="location-img-wrapper">
+                                    <amp-img src="./assest/Location.webp" width="1" height="1" layout="responsive"
+                                        alt="">
+                                    </amp-img>
+                                </div>
+                                <div>
+                                    <p>No. 81, ST Bed Entrance, off 80 Feet Road, Koramangala 4th Block, Koramangala,
+                                        Bengaluru, Karnataka 560034
+
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="flex">
+                                <div style="width:10%">
+                                    <amp-img src="./assest/Phone.webp" width="1" height="1" layout="responsive"
+                                        alt="logo">
+                                    </amp-img>
+                                </div>
+                                <h3>080 4680 8989</h3>
+                            </div>
+                            <div class="flex">
+                                <h3 style="margin: 5px;">4.9</h3>
+                                <div style="width: 40%;">
+                                    <amp-img src="./assest/stars.webp" width="5" height="1" layout="responsive" alt="">
+                                    </amp-img>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="width: 500px;">
+                            <amp-img src="./assest/Rectangle 137.webp" width="1.2" height="1" layout="responsive"
+                                alt="logo">
+                            </amp-img>
+                        </div>
+
+
+                    </div>
+                    <div class="flex map-btn-wrapper">
+                        <div>
+                            <p class="center-txt">GET DIRECTIONS</p>
+                        </div>
+                        <div>
+                            <p class="center-txt">Book a Consultation</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="orange-txt">Indiranagar</h1>
+                    <div class="flex">
+                        <div class="loc-detail">
+                            <div class="flex1">
+                                <div class="location-img-wrapper">
+                                    <amp-img src="./assest/Location.webp" width="1" height="1" layout="responsive"
+                                        alt="">
+                                    </amp-img>
+                                </div>
+                                <div>
+                                    <p>505/1 1st A Cross Indiranagar 1st Stage (Near CMH Hospital/Costa Coffee),
+                                        Bengaluru, Karnataka 560038
+
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="flex">
+                                <div style="width:10%">
+                                    <amp-img src="./assest/Phone.webp" width="1" height="1" layout="responsive"
+                                        alt="logo">
+                                    </amp-img>
+                                </div>
+                                <h3>080 4680 8989</h3>
+                            </div>
+                            <div class="flex">
+                                <h3 style="margin: 5px;">4.9</h3>
+                                <div style="width: 40%;">
+                                    <amp-img src="./assest/stars.webp" width="5" height="1" layout="responsive" alt="">
+                                    </amp-img>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="width: 500px;">
+                            <amp-img src="./assest/Rectangle 145.webp" width="1.2" height="1" layout="responsive"
+                                alt="logo">
+                            </amp-img>
+                        </div>
+
+
+                    </div>
+                    <div class="flex map-btn-wrapper">
+                        <div>
+                            <p class="center-txt">GET DIRECTIONS</p>
+                        </div>
+                        <div>
+                            <p class="center-txt">Book a Consultation</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section style="padding: 0;" id="travel">
+
+
+
+
+            <div style="background: linear-gradient(177.97deg, #D0F2FF 1.72%, #FFFFFF 98.52%)">
+                <div class="flex" style="padding: 10px;">
+                    <div>
+                        <h2 class="drk-blu-txt">Skip the travel!</h2>
+                        <p>Take Online Doctor Consultation <br/>Private video consultation</p>
+                    </div>
+                    <div style="margin: 20px; flex:1;">
+                        <amp-img src="./assest/istockphoto-1294132648-612x612 1.webp" width="1.3" height="1"
+                            layout="responsive" alt="">
+                        </amp-img>
+                    </div>
+
+                </div>
+
+                <div class="blue-bg center-txt" style="padding: 1px; border-radius: 5px; width: 90%; margin: auto;">
+                    <h2>Book Free Appointment </h2>
+                </div>
+
+
+
+            </div>
+            <div>
+
+                <h3 class="center-txt">How technology-enabled OneCare Diabetes<br/>
+                    Clinics provide better outcomes:</h3>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="FAQ">
+<h1 class="center-txt drk-blu-txt">FAQs</h1>
+
+
+
+<div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+            <nav>
+                <div class="logo-wrapper">
+                    <a href="/" class="logo">
+                        <amp-img src="./assest/OneCare_Logo-03_3.webp" width="3.2" height="1" layout="responsive"
+                            alt="logo">
+                        </amp-img>
+                    </a>
+
+                </div>
+                <div>
+                    <p class="gray-txt web"> A Chain of <BR />Smart Diabetes Clinics</p>
+
+                </div>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
